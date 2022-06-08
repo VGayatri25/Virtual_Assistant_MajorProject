@@ -23,10 +23,10 @@ app.post("/dialogflow", express.json(), (req, res) => {
 		});
 
 		const SCOPES = 'https://www.googleapis.com/auth/calendar';
-		const GOOGLE_PRIVATE_KEY="-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQC+J0cATlDWEEej\nVCiGrRagUoQcMfBuH/j31f1jJIdEda07dr0CmokQRIpA7CKyVepbFOpUEUt0YETd\nwlgMyfPqvs1p6Vp6JOBbXvopI1u0BAEiJ08DrxJVIw7JNF7ImhwCI+8zHrkNBXI4\n0+XJTNbIHyv+FptizVE1qGlutHaw6QQ3w9hfsC4jdLabDB5k+oTzVUVbb0PCRNdp\nC0urgRvAZBq0rVd0dVTXFO4Jnj7uHAOcMX3ENh64/6Gzp464HkbD+Dlv7gg/OmBC\nv7kNsxJIHuYU5/fSrLRkoJ/IhmfUuIe7NB2zH73xxWjuT9xxdwPwM/Qlo4Bo3tmu\neP4jckMVAgMBAAECggEAVwomi2LNyLaJ/B6lMERhg4BR3ZAUZGw5K8SlaDDLxA/z\nfDEVQnBXRf2BpUcReL0v+YIg4ttJxRrd2v4/DJeSkYTGBPFeS2O+2MQoURVQwB1H\nIYmJtv93rkXOWlYg/sTgBjDJqIYrIWU5S/7eg16rP85Y9kUF2ltuDVgp7pUncUFl\nzBu5/OwiXtST2jnYgRlGGrjzUB/wpsV7G5OpaF9TYizCs9Gy+wlzb8TWD2fEFdzO\nVmgEbM0T6C83huLycJtLmFc5vxKST0/grdreWN7W72xpeGR/eAZvyPLmoHp1QaF3\n4OautrRL9Q8//0+L7fNZdyEZDutnMKO0klqyA54rnwKBgQDnBsP93HxFTeVEoG+p\nbK9u5PRi8yEXOFoaThk1MPuqOjEViU4ph1fbK+Hzy++UUWwLkK4i5IAVShzFtYZE\nULtmZbWfw+lSO1CF70kzbcFs3xyMoHNgqTQxeih0wLg6fGou/ldbhX+fwIEjsABV\nIvItzri2yipbrH8bZjLi5QnLDwKBgQDStW0Vuhy5nOr+bMuiQ2ezz7BhXiksat64\nTN2oemdw2rQg5Rn0ixAU7hsSVpXVUorwcaADRajc+5pAl5Ag67i1D/6K9QsYYorx\n19Ronun9HjDUV7w+0Oh/TYYAK7Owy0D9wH0ZLTYj2xdMDYXUwT+nastdph9jhLJF\nf84VoDqfmwKBgQCuDLzPnrLJC7x0jWJShB1PMJKlkYIWmk/XjYsUNckEID8meIE4\nbEzWRCNApx3h4c3CkMeAZiHQ6DrxAKcdBK2KoYnJybEYULODlBjT9BZLTXOWxrLl\n2dQGin+8Jg0lkuH0cY2i19qkokUoe8pkWaWWuS0UGQ78beJ84+vmYKOWJQKBgDf9\nu/IFFbMBDrTzJh2FOd5fNyh4hApoj6x7yH8Hn8suYqVHG+GOvoRBTXJPDdu05nTE\nTNfxv9CRD0lQvRzyZo++o047lWoybWecibYPXHBFgIY8lio/Czkg2ZXcBxDYwfls\nGBIDoJpgks1D3qdNfuO3Djlhdn/UeCbdsl6uyEU3AoGAcFI/cufWxQ0h4+WY4AqO\nUhwXekCR+ACcBVvfj5WL/SPNBPMSeP7SPtlribN1fvhZgB4y9U20gjxSnCAD+Kfq\n/qOuP1ls/b6fk3yGzem+0ZH+KjNXrpPvIwQFoY56cFBQFl68oEFPn4cd0v48oJGS\nj32e8eUNXz5A9cjSOLP6Am8=\n-----END PRIVATE KEY-----\n"//"<private-key>";
-		const GOOGLE_CLIENT_EMAIL ="calendar-api@demo1-daljlc.iam.gserviceaccount.com" //"<client-email>"
-		const GOOGLE_PROJECT_NUMBER = 345380292925//"<project-number>"
-		const GOOGLE_CALENDAR_ID ="v100sdgeik1rum4pf50q1s4tv8@group.calendar.google.com" //"<calender-id>"
+		const GOOGLE_PRIVATE_KEY=//Key
+		const GOOGLE_CLIENT_EMAIL =//"<client-email>"
+		const GOOGLE_PROJECT_NUMBER = //"<project-number>"
+		const GOOGLE_CALENDAR_ID = //"<calender-id>"
 		
 		const jwtClient = new google.auth.JWT(
 		GOOGLE_CLIENT_EMAIL,
@@ -105,7 +105,7 @@ agent.handleRequest(intentMap);
 
 app.get('/', (req, res) => {
 calendar.events.list({
-	calendarId: "v100sdgeik1rum4pf50q1s4tv8@group.calendar.google.com",
+	calendarId://"<calender-id>",
 	timeMin: (new Date()).toISOString(),
 	maxResults: 10,
 	singleEvents: true,
